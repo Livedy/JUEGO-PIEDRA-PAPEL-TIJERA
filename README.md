@@ -26,3 +26,14 @@ El programa solicita al usuario que ingrese una jugada (`piedra`, `papel` o `tij
 | Piedra   | Tijera   |
 | Papel    | Piedra   |
 | Tijera   | Papel    |
+
+## Ejemplo de uso
+
+```
+Ingresa tu jugada (piedra, papel, tijera) o escribe 'salir' para terminar: piedra
+La máquina elige: tijera
+¡Ganaste!
+Marcador -> Usuario: 1 | Máquina: 0
+
+Ingresa tu jugada (piedra, papel, tijera) o escribe 'salir' para terminar: salir
+Fin del juego. Marcador final -> Usuario: 1 | Máquina: 0
