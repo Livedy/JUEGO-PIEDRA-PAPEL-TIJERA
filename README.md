@@ -1,6 +1,6 @@
 # Piedra, Papel o Tijera
 
-Juego de consola en Python que permite a un usuario jugar Piedra, Papel o Tijera contra la máquina, con marcador de puntos y validación de entradas. El proyecto está organizado en una **librería propia** que separa la lógica del juego del programa principal.
+Juego de consola en Python donde el usuario juega Piedra, Papel o Tijera contra la máquina. Lleva un marcador de puntos y valida lo que el usuario escribe. La lógica del juego está separada en una **librería propia** que el programa principal importa.
 
 ## Estructura del proyecto
 
@@ -13,12 +13,12 @@ JUEGO-PIEDRA-PAPEL-TIJERA/
 └── README.md
 ```
 
-- **`logica_ppt.py`**: librería creada por el estudiante. Contiene las funciones del juego (validación, jugada de la máquina, determinación del ganador y mensajes) y las reglas en un diccionario.
-- **`PROYECTOPPT.py`**: programa principal. Importa la librería con `import logica_ppt as juego`, por lo que el código principal queda corto y solo maneja el bucle y el marcador.
+- **`logica_ppt.py`**: contiene las funciones del juego (validar la jugada, jugada de la máquina, decidir el ganador y los mensajes) y las reglas guardadas en un diccionario.
+- **`PROYECTOPPT.py`**: programa principal. Importa la librería con `import logica_ppt as juego`, así que el código principal queda corto y solo se encarga del bucle y el marcador.
 
 ## Descripción
 
-El programa solicita al usuario que ingrese una jugada (`piedra`, `papel` o `tijera`), valida que el texto ingresado sea correcto, genera una jugada aleatoria para la máquina y determina el resultado de la ronda (empate, victoria del usuario o victoria de la máquina). El marcador se actualiza después de cada ronda y el ciclo se repite hasta que el usuario decide salir.
+El programa pide al usuario que escriba una jugada (`piedra`, `papel` o `tijera`), revisa que lo escrito sea correcto, la máquina elige una opción al azar y se compara para ver quién gana (o si hay empate). Después de cada ronda se actualiza el marcador y se vuelve a pedir una jugada, hasta que el usuario escribe `salir`.
 
 ## Funcionamiento
 
@@ -42,7 +42,7 @@ El programa solicita al usuario que ingrese una jugada (`piedra`, `papel` o `tij
 
 ## Diagrama de flujo
 
-El diagrama (`flujograma_piedra_papel_tijera.png`) representa fielmente la lógica del código. La rama de validación, cuando la jugada **no es válida**, regresa directamente a "Ingresar jugada" (equivalente al `continue` del código), sin continuar al turno de la máquina.
+El diagrama (`flujograma_piedra_papel_tijera.png`) muestra la lógica del código. Cuando la jugada **no es válida**, el flujo vuelve a "Ingresar jugada" (igual que el `continue` del código), sin pasar al turno de la máquina.
 
 ## Cómo ejecutar
 
@@ -68,13 +68,13 @@ Marcador final -> Usuario: 1 | Máquina: 0
 
 ## Conclusiones
 
-El desarrollo del juego Piedra, Papel o Tijera permitió aplicar de forma práctica las estructuras lógicas fundamentales de la programación: el bucle `while` para mantener el juego activo, los condicionales para evaluar las reglas y la validación de entradas para controlar errores del usuario. Comprobé que un programa, por simple que parezca, requiere anticipar todos los caminos posibles que puede tomar el usuario —incluyendo entradas incorrectas— para comportarse de forma robusta.
+Con este juego pude aplicar las estructuras básicas de programación: el bucle `while` para que el juego siga corriendo, los condicionales para revisar las reglas y la validación para controlar lo que escribe el usuario. Me di cuenta de que aunque el programa sea sencillo, hay que pensar en todos los casos posibles, incluso cuando el usuario escribe algo mal.
 
-Al separar la lógica en una librería propia (`logica_ppt.py`) e importarla desde el programa principal, entendí el valor de la modularidad: el código principal se vuelve más corto y legible, las funciones se pueden reutilizar y mantener por separado, y las reglas del juego quedan centralizadas en un diccionario fácil de ampliar. Esta organización refleja cómo se estructura el software real, donde la lógica se distribuye en módulos en lugar de concentrarse en un único archivo.
+Al separar la lógica en una librería aparte y llamarla desde el programa principal, el código quedó más corto y ordenado, las funciones se pueden volver a usar y las reglas están todas en un solo lugar. Esto se parece a como se organiza el código en proyectos más grandes, donde no todo va en un solo archivo.
 
-Una implicación importante del proyecto fue comprender que el diagrama de flujo y el código deben corresponderse exactamente: un diagrama que no refleja la lógica real del programa pierde su utilidad como herramienta de diseño y documentación. Como logro, conseguí un programa funcional con marcador acumulado, manejo de errores y una estructura modular, reforzando la importancia de planificar la lógica antes de codificar.
+Otra cosa que aprendí es que el diagrama de flujo y el código tienen que coincidir; si el diagrama no representa lo que hace el programa, deja de servir. Al final logré un juego que funciona, lleva el marcador, controla los errores y está dividido en módulos.
 
-## Integrantes
+## Integrante
 
 - Darwin Alexis Pilaguano Toapanta
 
@@ -82,3 +82,4 @@ Una implicación importante del proyecto fue comprender que el diagrama de flujo
 **Asignatura:** Lógica de Programación
 **Carrera:** Ingeniería en Sistemas — Universidad Internacional del Ecuador (UIDE)
 **Fecha:** Junio 2026
+
